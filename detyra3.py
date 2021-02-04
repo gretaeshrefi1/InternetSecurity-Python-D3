@@ -6,16 +6,28 @@ root.geometry("400x400")
 
 
 
-def show():
-	myLabel = Label(root, text=clicked.get()).pack()
+my_menu = Menu(root)
+root.config(menu=my_menu)
+
+#click command
+def our_command():
+	pass
 
 
 
-clicked = StringVar()
-clicked.set("Monday")
+#create a menu item
 
-drop = OptionMenu(root, clicked,"Monday","greta", "Tuesday", "Wednesday")
-drop.pack()
+file_menu = Menu(my_menu)
+my_menu.add_cascade(label="File", menu=file_menu)
+file_menu.add_command(label="New...", command=our_command)
+file_menu.add_separator()
+file_menu.add_command(label="Exit", command=root.quit)
+
+#create another menu
+edit_menu = Menu (my_menu)
+my_menu.add_cascade(label="Edit", menu=edit_menu)
+edit_menu.add_command(label="Cut", command=our_command)
+edit_menu.add_command(label="Copy", command=our_command)
 
 
 
