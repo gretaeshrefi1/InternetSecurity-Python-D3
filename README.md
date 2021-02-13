@@ -11,5 +11,5 @@ databaze tek: Appdata\Local\Google\Chrome\User Data\Default\Login Data
 
 # Run
 
-Per te bere print output-in thjesht: py detyra3.py
+Per te bere print output-in thjesht shtypni: py detyra3.py
 
